@@ -851,6 +851,37 @@
             transform: translateY(-3px);
         }
 
+        /* Custom Social Media Icons */
+        .social-media-custom {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-media-custom a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+
+        .social-media-custom a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .social-media-custom img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
         .copyright {
             text-align: center;
             padding-top: 30px;
@@ -957,6 +988,15 @@
 
             .detail-header h1 {
                 font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links, .social-media-custom {
+                justify-content: center;
             }
         }
 
@@ -1509,11 +1549,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    <div class="social-media-custom">
+                        <a href="https://www.facebook.com/p/Turisti%C4%8Dka-zajednica-Op%C4%87ine-Tomislavgrad-61560474794470/" target="_blank" title="Facebook">
+                            <img src="icons/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/turisticka_tomislavgrad/" target="_blank" title="Instagram">
+                            <img src="icons/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank" title="TikTok">
+                            <img src="icons/tiktok.png" alt="TikTok">
+                        </a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1636,7 +1681,7 @@
             <div class="detail-info">
                 <div class="detail-main">
                     <h2>O planini Vran</h2>
-                    <p>Planina Vran, sa svojim najvišim vrhom od 2074 metra, predstavlja jednu od najimpresivnijih planina u Hercegovini. Njen masiv se proteže kroz nekoliko općina, nudeći neverovatne prizore i bogatu prirodnu baštinu.</p>
+                    <p>Planina Vran, sa svojim najvišim vrhom od 2074 metara, predstavlja jednu od najimpresivnijih planina u Hercegovini. Njen masiv se proteže kroz nekoliko općina, nudeći neverovatne prizore i bogatu prirodnu baštinu.</p>
                     
                     <p>Planina je poznata po svojoj raznolikoj flori i fauni, uključujući endemske vrste koje se mogu naći samo na ovim visinama. Staze za planinarenje vode kroz bujne šume, preko planinskih livada do samog vrha.</p>
 
@@ -2485,7 +2530,7 @@
             <div class="detail-info">
                 <div class="detail-main">
                     <h2>O maratonu</h2>
-                    <p>Planinarski maraton Vran je godišnje takmičenje koje okuplja planinare iz cijele regije. Maraton se održava na planini Vran i uključuje nekoliko kategorija različite težine.</p>
+                    <p>Planinarski maraton Vran je godišnje takmičenje koje okuplja planinare iz cijele regiji. Maraton se održava na planini Vran i uključuje nekoliko kategorija različite težine.</p>
                     
                     <p>Takmičari se suočavaju sa izazovima planine Vran, uživajući u prekrasnim pejzažima i testirajući svoje planinarske vještine.</p>
 
@@ -2753,7 +2798,48 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>Turistička zajednica</h3>
-                <p>Turistička zajednica Općine Tomislavgrad pos
+                <p>Turistička zajednica Općine Tomislavgrad posvećena je promociji turističkog potencijala našeg prekrasnog kraja i pružanju informacija posjetiteljima.</p>
+                <div class="social-media-custom">
+                    <a href="https://www.facebook.com/p/Turisti%C4%8Dka-zajednica-Op%C4%87ine-Tomislavgrad-61560474794470/" target="_blank" title="Facebook">
+                        <img src="icons/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/turisticka_tomislavgrad/" target="_blank" title="Instagram">
+                        <img src="icons/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank" title="TikTok">
+                        <img src="icons/tiktok.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Brzi linkovi</h3>
+                <ul class="footer-links">
+                    <li><a onclick="showPage('home')">Početna</a></li>
+                    <li><a onclick="showPage('about')">O Tomislavgradu</a></li>
+                    <li><a onclick="showPage('highlights')">Atrakcije</a></li>
+                    <li><a onclick="showPage('accommodation')">Smještaj</a></li>
+                    <li><a onclick="showPage('events')">Događaji</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Korisni linkovi</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Turistički vodiči</a></li>
+                    <li><a href="#">Mapa i transport</a></li>
+                    <li><a href="#">Vremenska prognoza</a></li>
+                    <li><a href="#">Kultura i historija</a></li>
+                    <li><a href="#">Gastronomija</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Prijavite se na naš newsletter za najnovije informacije o događajima i ponudama.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Vaš email" required>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Prijavi se</button>
+                </form>
             </div>
         </div>
         <div class="copyright">
@@ -2761,183 +2847,179 @@
         </div>
     </footer>
 
-<script>
-    // Gallery images array
-    const galleryImages = [
-        'images/galerija1.jpg',
-        'images/galerija2.jpg',
-        'images/galerija3.jpg',
-        'images/galerija4.jpg',
-        'images/galerija5.jpg',
-        'images/galerija6.jpg',
-        'images/galerija7.jpg',
-        'images/galerija8.jpg',
-        'images/galerija9.jpg',
-        'images/galerija10.jpg',
-        'images/galerija11.jpg',
-        'images/galerija12.jpg'
-    ];
+    <script>
+        // Gallery images array
+        const galleryImages = [
+            'images/galerija1.jpg',
+            'images/galerija2.jpg',
+            'images/galerija3.jpg',
+            'images/galerija4.jpg',
+            'images/galerija5.jpg',
+            'images/galerija6.jpg',
+            'images/galerija7.jpg',
+            'images/galerija8.jpg',
+            'images/galerija9.jpg',
+            'images/galerija10.jpg',
+            'images/galerija11.jpg',
+            'images/galerija12.jpg'
+        ];
 
-    let currentImageIndex = 0;
+        let currentImageIndex = 0;
 
-    // Hash-based page navigation
-    function showPage(page) {
-        window.location.hash = page;
-    }
-
-    // Hash-based detail navigation
-    function showDetail(type, id) {
-        window.location.hash = `detail-${id}`;
-    }
-
-    // Route handler
-    function handleRoute() {
-        const hash = window.location.hash.substring(1); // Remove #
-        
-        // Hide all pages and detail pages
-        document.querySelectorAll('.page-section').forEach(section => {
-            section.classList.remove('active');
-        });
-        document.querySelectorAll('.detail-page').forEach(section => {
-            section.classList.remove('active');
-        });
-        
-        // Show hero only for home page
-        document.getElementById('home-hero').style.display = 'none';
-        
-        // Handle routes
-        if (hash.startsWith('detail-')) {
-            const detailId = hash.substring(7); // Remove 'detail-'
-            const detailPage = document.getElementById(`detail-${detailId}`);
-            if (detailPage) {
-                detailPage.classList.add('active');
-            } else {
-                // Fallback to home
-                showHome();
-            }
-        } else if (hash === 'home' || hash === '') {
-            showHome();
-        } else {
-            const page = document.getElementById(`${hash}-page`);
-            if (page) {
-                page.classList.add('active');
-                document.getElementById('home-hero').style.display = 'none';
-            } else {
-                showHome();
-            }
+        // Page navigation
+        function showPage(page) {
+            // Hide all pages and detail pages
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.detail-page').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Hide hero section when navigating to other pages
+            document.getElementById('home-hero').style.display = page === 'home' ? 'flex' : 'none';
+            
+            // Show selected page
+            document.getElementById(page + '-page').classList.add('active');
+            
+            // Close mobile menu if open
+            document.querySelector('.nav-links').classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
         }
-        
-        // Close mobile menu
-        document.querySelector('.nav-links').classList.remove('active');
-        
-        // Scroll to top
-        window.scrollTo(0, 0);
-    }
 
-    function showHome() {
-        document.getElementById('home-page').classList.add('active');
-        document.getElementById('home-hero').style.display = 'flex';
-    }
-
-    // Lightbox functionality
-    function openLightbox(index) {
-        currentImageIndex = index;
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        
-        lightboxImage.src = galleryImages[currentImageIndex];
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-        const lightbox = document.getElementById('lightbox');
-        lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-
-    function navigateLightbox(direction) {
-        currentImageIndex += direction;
-        
-        if (currentImageIndex < 0) {
-            currentImageIndex = galleryImages.length - 1;
-        } else if (currentImageIndex >= galleryImages.length) {
-            currentImageIndex = 0;
+        // Detail page navigation
+        function showDetail(type, id) {
+            // Hide all pages and detail pages
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelectorAll('.detail-page').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Hide hero section
+            document.getElementById('home-hero').style.display = 'none';
+            
+            // Show selected detail page
+            document.getElementById('detail-' + id).classList.add('active');
+            
+            // Close mobile menu if open
+            document.querySelector('.nav-links').classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
         }
-        
-        document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
-    }
 
-    // Event listeners
-    document.addEventListener('DOMContentLoaded', function() {
-        // Handle initial route
-        handleRoute();
-        
-        // Handle hash changes
-        window.addEventListener('hashchange', handleRoute);
-        
-        // Lightbox event listeners
-        document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-        document.getElementById('lightboxPrev').addEventListener('click', () => navigateLightbox(-1));
-        document.getElementById('lightboxNext').addEventListener('click', () => navigateLightbox(1));
-        
-        // Close lightbox on background click
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeLightbox();
-            }
-        });
-        
-        // Keyboard navigation for lightbox
-        document.addEventListener('keydown', function(e) {
+        // Lightbox functionality
+        function openLightbox(index) {
+            currentImageIndex = index;
             const lightbox = document.getElementById('lightbox');
-            if (lightbox.classList.contains('active')) {
-                if (e.key === 'Escape') {
+            const lightboxImage = document.getElementById('lightboxImage');
+            
+            lightboxImage.src = galleryImages[currentImageIndex];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function navigateLightbox(direction) {
+            currentImageIndex += direction;
+            
+            if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            } else if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            }
+            
+            document.getElementById('lightboxImage').src = galleryImages[currentImageIndex];
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show home page by default
+            showPage('home');
+            
+            // Lightbox event listeners
+            document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+            document.getElementById('lightboxPrev').addEventListener('click', () => navigateLightbox(-1));
+            document.getElementById('lightboxNext').addEventListener('click', () => navigateLightbox(1));
+            
+            // Close lightbox on background click
+            document.getElementById('lightbox').addEventListener('click', function(e) {
+                if (e.target === this) {
                     closeLightbox();
-                } else if (e.key === 'ArrowLeft') {
-                    navigateLightbox(-1);
-                } else if (e.key === 'ArrowRight') {
-                    navigateLightbox(1);
                 }
-            }
+            });
+            
+            // Keyboard navigation for lightbox
+            document.addEventListener('keydown', function(e) {
+                const lightbox = document.getElementById('lightbox');
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        navigateLightbox(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        navigateLightbox(1);
+                    }
+                }
+            });
+
+            // Mobile menu toggle
+            document.querySelector('.mobile-menu').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Form submission
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Hvala Vam na poruci! Odgovorit ćemo u najkraćem mogućem roku.');
+                    this.reset();
+                });
+            });
+
+            // Close mobile menu when clicking on links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.querySelector('.nav-links').classList.remove('active');
+                });
+            });
+
+            // Close mobile menu when clicking on footer links
+            document.querySelectorAll('.footer-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    document.querySelector('.nav-links').classList.remove('active');
+                });
+            });
         });
 
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Form submission
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                alert('Hvala Vam na poruci! Odgovorit ćemo u najkraćem mogućem roku.');
-                this.reset();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-
-        // Close mobile menu when clicking on footer links
-        document.querySelectorAll('.footer-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-    });
-</script>
+    </script>
+</body>
+</html>
