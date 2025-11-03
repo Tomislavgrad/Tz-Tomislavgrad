@@ -273,7 +273,7 @@
             margin-bottom: 15px;
         }
 
-        /* ABOUT */
+         /* ABOUT */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -297,37 +297,15 @@
             height: 400px;
             background: url('images/about-tomislavgrad.jpg') center/cover no-repeat;
         }
-        /* Stil za dodatnu sliku */
-        .additional-image {
-            margin: 20px 0;
-            text-align: center;
+
+	    .nova-slika {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            height: 400px;
+            background: url('images/galerija1.jpg') center/cover no-repeat;
         }
 
-        .additional-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        /* Stil za dodatni tekst */
-        .additional-text {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #2c5530;
-        }
-
-        .additional-text h3 {
-            color: #2c5530;
-            margin-bottom: 10px;
-        }
-
-        .additional-text p {
-            color: #555;
-            line-height: 1.6;
-        }
 
         /* HIGHLIGHTS */
         .highlights {
@@ -1307,21 +1285,23 @@
                     <h2>Dragocjeno blago Hercegovine</h2>
                     <p>Tomislavgrad, smješten na nadmorskoj visini od 900 metara u prekrasnom Duvanjskom polju, predstavlja jedan od najznačajnijih turističkih centara zapadne Hercegovine. Okružen impozantnim planinama Vran, Radušom i Bitovnjom, grad nudi predivan pogled na jedno od najvećih krških polja u BiH.</p>
                     <p>Kroz bogatu historiju, ovaj kraj je bio naseljen još od ilirskog doba, a današnji naziv nosi u čast hrvatskog kralja Tomislava. Središte grada karakterizira autentična arhitektura s crkvom Uznesenja Blažene Djevice Marije koja dominira panoramom. Bogata kulturna baština, autentična hercegovačka gastronomija i legendarna gostoljubivost stanovnika čine Tomislavgrad idealnom destinacijom za sve ljubitelje prirode, tradicije i mirnog odmora.</p>
-                     
-                    <div class="additional-image">
-                        <img src="galerija1.jpg">
-                    </div>
-                    
                     <h3>Povijest</h3>
                     <p>Područje Tomislavgrada bilo je naseljeno još u pretpovijesno doba, o čemu svjedoče brojni arheološki nalazi. Kroz historiju, grad je mijenjao imena - od antičkog Daelminium do srednjovjekovnog Županjac, da bi 1928. godine dobio današnje ime u čast kralja Tomislava.</p>
-                    <h4>Geografija</h4>
+                    <h3>Geografija</h3>
                     <p>Tomislavgrad se nalazi u Duvanjskom polju, jednom od najvećih krških polja u Bosni i Hercegovini. Okružen je planinama Vran (2074 m), Raduša (1967 m) i Bitovnjom (1400 m), što čini ovaj kraj idealnim za planinarenje i prirodne ljepote.</p>
                 </div>
                 <div class="about-image">
                     <!-- Slika Tomislavgrada -->
-                    <img src="about-image">
-                    </div>
                 </div>
+	   	<div class="about-content new-section">
+			<div class="about-image nova-slika">
+				</div>	
+
+			<div class="about-text novi-tekst">
+				<h2>Drugi naslov</h2>
+				<p>Ovo je novi tekst</p>
+				</div>
+			</div>
             </div>
         </section>
     </div>
@@ -3101,6 +3081,7 @@
     </script>
 </body>
 </html>
+
 
 
 
