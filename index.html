@@ -67,15 +67,15 @@
             align-items: center;
         }
 
-        .logo h1 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 0;
-            cursor: pointer;
+        .logo img {
+   			height: 50px;              /* Prilagodi visinu */
+    		width: auto;               /* Očuva proporcije */
+    		cursor: pointer;
+    		transition: transform 0.3s ease;
         }
 
-        .logo span {
-            color: var(--secondary);
+		.logo-img:hover {
+   			transform: scale(1.05);    /* Blagi hover efekat */
         }
 
         .nav-links {
@@ -1073,7 +1073,7 @@
     <header id="header">
         <nav>
             <div class="logo" onclick="showPage('home')">
-                <h1>Tomislav<span>grad</span></h1>
+                <img src="logo/logo.png" alt="Tomislavgrad Logo" class="logo-img">
             </div>
             <ul class="nav-links">
                 <li><a onclick="showPage('home')">Početna</a></li>
@@ -3160,6 +3160,7 @@
     </script>
 </body>
 </html>
+
 
 
 
