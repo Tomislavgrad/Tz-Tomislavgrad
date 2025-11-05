@@ -1101,6 +1101,7 @@
             <ul class="nav-links">
                 <li><a onclick="showPage('home')">Početna</a></li>
                 <li><a onclick="showPage('about')">O Tomislavgradu</a></li>
+                <li><a onclick="showPage('facts')">Zanimljivosti</a></li>				
                 <li><a onclick="showPage('highlights')">Atrakcije</a></li>
                 <li><a onclick="showPage('accommodation')">Smještaj</a></li>
                 <li><a onclick="showPage('events')">Događaji</a></li>
@@ -1422,7 +1423,73 @@
             </div>
         </section>
     </div>
+	
+<!-- ZANIMLJIVOSTI PAGE -->
+<div class="page-section" id="facts-page">
+    <section id="facts">
+        <div class="section-title">
+            <h2>Zanimljivosti o Tomislavgradu</h2>
+            <p>Otkrijte fascinantne činjenice o našem gradu</p>
+        </div>
+        
+        <div class="highlight-cards">
+            <!-- Zanimljivost 1 -->
+            <div class="card" onclick="showDetail('fact', 'povijesno-ime')">
+                <div class="card-image" style="background-image: url('images/galerija7.jpg')"></div>
+                <div class="card-content">
+                    <h3>Duvanjski praslon</h3>
+                    <p>Slon na duvanjskom polju</p>
+                </div>
+            </div>
 
+            <!-- Zanimljivost 2 -->
+            <div class="card" onclick="showDetail('fact', 'kraljevska-korijenja')">
+                <div class="card-image" style="background-image: url('images/kralj-tomislav.jpg')"></div>
+                <div class="card-content">
+                    <h3>Kraljevska korijenja</h3>
+                    <p>Prema legendi, na Duvanjskom polju je 925. godine okrunjen prvi hrvatski kralj Tomislav, po kome je grad i dobio ime.</p>
+                </div>
+            </div>
+
+            <!-- Zanimljivost 3 -->
+            <div class="card" onclick="showDetail('fact', 'duvanjski-slon')">
+                <div class="card-image" style="background-image: url('images/slon-fosil.jpg')"></div>
+                <div class="card-content">
+                    <h3>"Duvanjski slon"</h3>
+                    <p>U blizini grada pronađeni su fosilni ostaci prahistorijskog slona, što je rijetkost u ovom dijelu Europe.</p>
+                </div>
+            </div>
+
+            <!-- Zanimljivost 4 -->
+            <div class="card" onclick="showDetail('fact', 'geografski-polozaj')">
+                <div class="card-image" style="background-image: url('images/planine.jpg')"></div>
+                <div class="card-content">
+                    <h3>Geografski položaj</h3>
+                    <p>Nalazi se na nadmorskoj visini od 900 metara, što ga čini jednim od najviših urbanih sredina u BiH.</p>
+                </div>
+            </div>
+
+            <!-- Zanimljivost 5 -->
+            <div class="card" onclick="showDetail('fact', 'prirodna-bastina')">
+                <div class="card-image" style="background-image: url('images/priroda.jpg')"></div>
+                <div class="card-content">
+                    <h3>Prirodna baština</h3>
+                    <p>Okružen je s četiri planine: Vran, Tušnica, Šćit i Kurljaj, što čini jedinstven prirodni amfiteatar.</p>
+                </div>
+            </div>
+
+            <!-- Zanimljivost 6 -->
+            <div class="card" onclick="showDetail('fact', 'arheoloska-riznica')">
+                <div class="card-image" style="background-image: url('images/arheologija.jpg')"></div>
+                <div class="card-content">
+                    <h3>Arheološka riznica</h3>
+                    <p>Na području općine postoji preko 50 arheoloških nalazišta iz različitih historijskih perioda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+	
     <!-- ACCOMMODATION PAGE -->
     <div class="page-section" id="accommodation-page">
         <section id="accommodation">
@@ -1684,6 +1751,221 @@
     </div>
 
     <!-- DETAIL PAGES -->
+
+	<!-- DETAIL PAGES ZA ZANIMLJIVOSTI -->
+
+<!-- DETAIL PAGE: DUVANJSKI PRASLON -->
+<div class="detail-page" id="detail-povijesno-ime">
+    <div class="detail-content">
+        <button class="back-button" onclick="showPage('facts')">
+            <i class="fas fa-arrow-left"></i> Natrag na zanimljivosti
+        </button>
+        
+        <div class="detail-header">
+            <h1>Duvanjski praslon</h1>
+            <p>Slon u Duvanjskom kraju</p>
+        </div>
+
+        <div class="detail-image" style="background-image: url('images/galerija7.jpg')"></div>
+
+        <div class="detail-info">
+            <div class="detail-main">
+                <h2>Povijesni razvoj imena</h2>
+                <p>Promjenama životnih uvjeta tijekom duge prošlosti nemirne Zemlje nije odolijevalo ni Duvanjsko polje. O životu na duvanjskome prostoru svjedoče pronađeni ostatci iz različitih razdoblja, kako iz daleke tako i iz bliske prošlosti. Čuli ste za afričkoga i azijskoga slona, ali jeste li za „duvanjskoga“?</p>
+                
+                <h3>Kronologija imena</h3>
+                <p><strong>Delminij</strong> - antičko ilirsko ime koje potječe od Delmata, ilirskog plemena koje je naseljavalo ovo područje. Naziv dolazi od ilirske riječi "delme" što znači ovca.</p>
+                
+                <p><strong>Županjac / Županj Potok</strong> - srednjovjekovni nazivi koji se spominju u povijesnim dokumentima. Naziv "Županjac" ukazuje na administrativnu ulogu naselja.</p>
+                
+                <p><strong>Sedidžedid</strong> - osmansko ime koje se doslovno prevodi kao "Novo Naselje". Ovaj period ostavio je značajan trag u arhitekturi i kulturi.</p>
+                
+                <p><strong>Duvno</strong> - tradicionalni naziv koji se koristio stoljećima, a koji potječe od antičkog Delminija. Ovo ime je bilo u službenoj upotrebi do 1928. godine.</p>
+                
+                <p><strong>Tomislavgrad</strong> - današnji naziv usvojen 1928. godine u čast prvog hrvatskog kralja Tomislava, koji je prema legendi okrunjen upravo na ovom području.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-history"></i>
+                        <h4>Prvo ime</h4>
+                        <p>Delminij</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-flag"></i>
+                        <h4>Trenutno ime</h4>
+                        <p>Tomislavgrad</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Promjena</h4>
+                        <p>1928. godine</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-sidebar">
+                <div class="info-item">
+                    <h4><i class="fas fa-info-circle"></i> Kronologija</h4>
+                    <p><strong>Delminij:</strong> Antičko doba</p>
+                    <p><strong>Županjac:</strong> Srednji vijek</p>
+                    <p><strong>Sedidžedid:</strong> Osmansko carstvo</p>
+                    <p><strong>Duvno:</strong> Do 1928.</p>
+                    <p><strong>Tomislavgrad:</strong> Od 1928.</p>
+                </div>
+
+                <div class="info-item">
+                    <h4><i class="fas fa-book"></i> Povijesni značaj</h4>
+                    <p>Svako ime predstavlja određeni historijski period i kulturni utjecaj koji je oblikovao identitet grada.</p>
+                </div>
+
+                <div class="info-item">
+                    <h4><i class="fas fa-map-marked-alt"></i> Lokalni značaj</h4>
+                    <p>Ime Duvno se i danas često koristi u svakodnevnom govoru lokalnog stanovništva.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DETAIL PAGE: KRALJEVSKA KORIJENJA -->
+<div class="detail-page" id="detail-kraljevska-korijenja">
+    <div class="detail-content">
+        <button class="back-button" onclick="showPage('facts')">
+            <i class="fas fa-arrow-left"></i> Natrag na zanimljivosti
+        </button>
+        
+        <div class="detail-header">
+            <h1>Kraljevska korijenja</h1>
+            <p>Legenda o krunidbi kralja Tomislava na Duvanjskom polju</p>
+        </div>
+
+        <div class="detail-image" style="background-image: url('images/kralj-tomislav.jpg')"></div>
+
+        <div class="detail-info">
+            <div class="detail-main">
+                <h2>Kraljevska legenda</h2>
+                <p>Legenda o krunidbi kralja Tomislava duboko je ukorijenjena u duvanjsku kulturu i tradiciju. Prema predaji, upravo na prostranom Duvanjskom polju odigrao se jedan od najvažnijih trenutaka hrvatske povijesti.</p>
+                
+                <h3>Povijesni kontekst</h3>
+                <p>Kralj Tomislav (910. – 928.) bio je prvi hrvatski kralj koji je ujedinio hrvatske kneževine u jedinstvenu državu. Prema srednjovjekovnim zapisima i narodnoj predaji, njegova krunidba održana je upravo na Duvanjskom polju 925. godine.</p>
+                
+                <p>Ovaj događaj ne samo što je obilježio početak hrvatske kraljevske tradicije, već je i zauvijek preoblikovao identitet ovog kraja, dajući mu kraljevski pečat koji nosi i danas.</p>
+
+                <h3>Značaj za grad</h3>
+                <p>U čast ovog povijesnog događaja, grad je 1928. godine službeno promijenio ime iz Duvno u Tomislavgrad. Ovo ime nosi ponos na kraljevsku tradiciju i povijesni značaj ovog područja.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-crown"></i>
+                        <h4>Kralj</h4>
+                        <p>Tomislav</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-calendar-day"></i>
+                        <h4>Godina</h4>
+                        <p>925.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-landmark"></i>
+                        <h4>Lokacija</h4>
+                        <p>Duvanjsko polje</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-sidebar">
+                <div class="info-item">
+                    <h4><i class="fas fa-info-circle"></i> Povijesni podaci</h4>
+                    <p><strong>Kralj:</strong> Tomislav</p>
+                    <p><strong>Period:</strong> 910. – 928.</p>
+                    <p><strong>Krunidba:</strong> 925. godine</p>
+                    <p><strong>Lokacija:</strong> Duvanjsko polje</p>
+                </div>
+
+                <div class="info-item">
+                    <h4><i class="fas fa-monument"></i> Spomen</h4>
+                    <p>U centru grada nalazi se spomenik kralju Tomislavu koji podsjeća na ovaj važan povijesni događaj.</p>
+                </div>
+
+                <div class="info-item">
+                    <h4><i class="fas fa-book-open"></i> Kulturni značaj</h4>
+                    <p>Legenda o krunidbi predstavlja važan dio lokalnog identiteta i kulturnog naslijeđa.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DETAIL PAGE: DUVANJSKI SLON -->
+<div class="detail-page" id="detail-duvanjski-slon">
+    <div class="detail-content">
+        <button class="back-button" onclick="showPage('facts')">
+            <i class="fas fa-arrow-left"></i> Natrag na zanimljivosti
+        </button>
+        
+        <div class="detail-header">
+            <h1>"Duvanjski slon"</h1>
+            <p>Fosili prahistorijskog slona - rijetkost u regiji</p>
+        </div>
+
+        <div class="detail-image" style="background-image: url('images/slon-fosil.jpg')"></div>
+
+        <div class="detail-info">
+            <div class="detail-main">
+                <h2>Paleontološko otkriće</h2>
+                <p>Arheološki nalazi fosilnih kostiju prahistorijskog slona (Palaeoloxodon antiquus) na području Tomislavgrada predstavljaju jednu od najznačajnijih paleontoloških otkrića u regiji.</p>
+                
+                <h3>Znanstveni značaj</h3>
+                <p>Ovi ostaci, stari više stotina tisuća godina, svjedoče o potpuno drugačijim klimatskim uvjetima koji su vladali na ovom području tokom pleistocenske epohe. Nalaz je posebno vrijedan jer ukazuje na postojanje stepske klima s bogatim pašnjacima koji su mogli prehranjivati ove divove.</p>
+                
+                <p>Prahistorijski slon (Palaeoloxodon antiquus) bio je jedna od najvećih vrsta slonova koji su ikada živjeli, s visinom od preko 4 metra u ramenima.</p>
+
+                <h3>Lokalni kontekst</h3>
+                <p>Pronalazak fosila slona na ovom području iznenadio je znanstvenike, jer se radi o rijetkom nalazu u ovom dijelu Europe. Ovo otkriće pruža dragocjene uvide u prahistorijsku klimu i ekologiju Hercegovine.</p>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-bone"></i>
+                        <h4>Vrsta</h4>
+                        <p>Palaeoloxodon antiquus</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Period</h4>
+                        <p>Pleistocen</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mountain"></i>
+                        <h4>Lokacija</h4>
+                        <p>Okolica Tomislavgrada</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-sidebar">
+                <div class="info-item">
+                    <h4><i class="fas fa-info-circle"></i> Znanstveni podaci</h4>
+                    <p><strong>Vrsta:</strong> Palaeoloxodon antiquus</p>
+                    <p><strong>Visina:</strong> Preko 4 metra</p>
+                    <p><strong>Težina:</strong> Do 15 tona</p>
+                    <p><strong>Period:</strong> Pleistocen</p>
+                </div>
+
+                <div class="info-item">
+                    <h4><i class="fas fa-map-marked-alt"></i> Otkriće</h4>
+                    <p>Fosili su pronađeni tokom arheoloških istraživanja u okolnim brdima.</p>
+                </div>
+
+                <div class="info-item">
+                    <h4><i class="fas fa-university"></i> Izložba</h4>
+                    <p>Dio fosila može se vidjeti u lokalnom muzeju i Zemaljskom muzeju Bosne i Hercegovine.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Dodaj ostale detail pages za preostale zanimljivosti na isti način -->
 
     <!-- ATRAKCIJE DETAIL PAGES -->
 
@@ -3224,6 +3506,7 @@
     </script>
 </body>
 </html>
+
 
 
 
