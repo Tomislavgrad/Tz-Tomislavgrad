@@ -329,7 +329,171 @@
         gap: 30px;
     }
 }
+/* ZANIMLJIVOSTI GRID SA EXPAND FUNKCIJOM */
+#facts-page {
+    background: var(--color-light);
+}
 
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.fact-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.fact-card-inner {
+    padding: 0;
+}
+
+.fact-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.fact-card h3 {
+    color: var(--color-primary);
+    margin: 20px 20px 10px;
+    font-size: 1.3rem;
+}
+
+.fact-preview {
+    color: var(--text-light);
+    margin: 0 20px 20px;
+    line-height: 1.6;
+}
+
+/* Expanded content - sakriveno po defaultu */
+.fact-expanded {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: #f8f9fa;
+}
+
+.fact-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.fact-text {
+    padding: 20px 0;
+}
+
+.fact-text p {
+    margin-bottom: 15px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.fact-text p:last-child {
+    margin-bottom: 0;
+}
+
+.fact-content-image {
+    padding: 20px 0;
+}
+
+.fact-content-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Toggle button */
+.fact-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.fact-card:hover .fact-toggle {
+    background: var(--color-secondary);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Active state kada je kartica otvorena */
+.fact-card.active {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.fact-card.active .fact-expanded {
+    max-height: 1000px;
+}
+
+.fact-card.active .fact-toggle {
+    background: var(--color-secondary);
+}
+
+.fact-card.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.fact-card.active .toggle-text {
+    content: "Zatvori";
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .facts-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .fact-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .fact-text,
+    .fact-content-image {
+        padding: 15px 0;
+    }
+    
+    .fact-content-image img {
+        height: 150px;
+    }
+    
+    .fact-card h3 {
+        margin: 15px 15px 8px;
+    }
+    
+    .fact-preview {
+        margin: 0 15px 15px;
+    }
+    
+    .fact-toggle {
+        padding: 12px 15px;
+    }
+}
         /* HIGHLIGHTS */
         .highlights {
             background-color: #f8f9fa;
@@ -3506,6 +3670,7 @@
     </script>
 </body>
 </html>
+
 
 
 
