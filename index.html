@@ -273,39 +273,62 @@
             margin-bottom: 15px;
         }
 
-         /* ABOUT */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
+/* ABOUT */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+}
 
-        .about-text h2 {
-            margin-bottom: 20px;
-        }
+/* Klasa za obrnuti redoslijed - ISPRAVNO */
+.about-content.reverse {
+    grid-template-areas: "image text";
+}
 
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
+.about-content:not(.reverse) {
+    grid-template-areas: "text image";
+}
 
-        .about-image {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            height: 400px;
-            background: url('images/about-tomislavgrad.jpg') center/cover no-repeat;
-        }
+.about-text {
+    grid-area: text;
+}
 
-	    .nova-slika {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            height: 400px;
-            background: url('images/galerija1.jpg') center/cover no-repeat;
-        }
+.about-image {
+    grid-area: image;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    height: 400px;
+    background: url('images/about-tomislavgrad.jpg') center/cover no-repeat;
+}
 
+.nova-slika {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    height: 400px;
+    background: url('images/polje1.jpg') center/cover no-repeat;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+/* Responsive dizajn */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: "text" "image" !important;
+        gap: 30px;
+    }
+}
 
         /* HIGHLIGHTS */
         .highlights {
@@ -1093,8 +1116,8 @@
     <!-- HERO SECTION -->
     <section class="hero" id="home-hero">
         <div class="hero-content">
-            <h1>Dočekajte ljepotu Tomislavgrada</h1>
-            <p>Otkrijte čaroliju Duvanjskog polja, planine Vran i bogate kulturne baštine</p>
+            <h1>Turistička zajednica Općine Tomislavgrad</h1>
+            <p>Priroda okrunjena poviješću</p>
             <div>
                 <a class="btn" onclick="showPage('about')">Istražite</a>
                 <a class="btn btn-outline" onclick="showPage('contact')">Kontaktirajte nas</a>
@@ -1291,38 +1314,60 @@
         </section>
     </div>
 
-    <!-- ABOUT PAGE -->
-    <div class="page-section" id="about-page">
-        <section id="about">
-            <div class="section-title">
-                <h2>O Tomislavgradu</h2>
-                <p>Detaljnije o našem prekrasnom gradu</p>
+<!-- ABOUT PAGE -->
+<div class="page-section" id="about-page">
+    <section id="about">
+        <div class="section-title">
+            <h2>O Tomislavgradu</h2>
+            <p>Detaljnije o našem prekrasnom gradu</p>
+        </div>
+        
+        <!-- Prva sekcija - tekst lijevo, slika desno -->
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Dobrodošli u srce dinarskog krša</h2>
+                <p>Unutar vijenca ispletenoga planinama, u srce dinarskoga krša, smjestilo se mjesto ispunjeno tisućljetnom poviješću, nekada poznato kao Delminij, Županjac, Županj Potok, Sedidžedid, Duvno, a danas kao Tomislavgrad. Još iz vremena prije Krista, prema Delminiju slavna ravnica na kojoj počiva Tomislavgrad nazvala se Duvanjskim poljem (od ilirskoga delme=ovca nastaje Duvno). Već u svojemu imenu Duvanjsko polje priča priču o kraju pašnjačkoga stočarstva, kraju koji unatoč škrtu kršu hrani ljude puna srca i jaka karaktera.</p>
+                <h3>Povijest</h3>                    
+                <p>Duvnjaci su poznati kao osebujni ljudi i dobri domaćini. Netaknuta priroda koja okružuje Duvanjsko polje, njegov kamen i vrtače, jezera i rijeke, skriva bogat i zanimljiv svijet – od biljaka i životinja do svega što su Duvnjaci stvorili iskoristivši prirodne blagodati. Iako su duvanjski kraj tijekom prošlosti mnogi nazivali svojim vlasništvom, njegovom prirodom i njegovim čovjekom nikada nisu zagospodarili. Za svoju prgavost možda mogu zahvaliti Delmatima, a možda i svemu što su proživjeli nakon njih.</p> 
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Dragocjeno blago Hercegovine</h2>
-                    <p>Tomislavgrad, smješten na nadmorskoj visini od 900 metara u prekrasnom Duvanjskom polju, predstavlja jedan od najznačajnijih turističkih centara zapadne Hercegovine. Okružen impozantnim planinama Vran, Radušom i Bitovnjom, grad nudi predivan pogled na jedno od najvećih krških polja u BiH.</p>
-                    <p>Kroz bogatu historiju, ovaj kraj je bio naseljen još od ilirskog doba, a današnji naziv nosi u čast hrvatskog kralja Tomislava. Središte grada karakterizira autentična arhitektura s crkvom Uznesenja Blažene Djevice Marije koja dominira panoramom. Bogata kulturna baština, autentična hercegovačka gastronomija i legendarna gostoljubivost stanovnika čine Tomislavgrad idealnom destinacijom za sve ljubitelje prirode, tradicije i mirnog odmora.</p>
-                    <h3>Povijest</h3>
-                    <p>Područje Tomislavgrada bilo je naseljeno još u pretpovijesno doba, o čemu svjedoče brojni arheološki nalazi. Kroz historiju, grad je mijenjao imena - od antičkog Daelminium do srednjovjekovnog Županjac, da bi 1928. godine dobio današnje ime u čast kralja Tomislava.</p>
-                    <h3>Geografija</h3>
-                    <p>Tomislavgrad se nalazi u Duvanjskom polju, jednom od najvećih krških polja u Bosni i Hercegovini. Okružen je planinama Vran (2074 m), Raduša (1967 m) i Bitovnjom (1400 m), što čini ovaj kraj idealnim za planinarenje i prirodne ljepote.</p>
-                </div>
-                <div class="about-image">
-                    <!-- Slika Tomislavgrada -->
-                </div>
-	   	<div class="about-content new-section">
-			<div class="about-image nova-slika">
-				</div>	
-
-			<div class="about-text novi-tekst">
-				<h2>Drugi naslov</h2>
-				<p>Ovo je novi tekst</p>
-				</div>
-			</div>
+            <div class="about-image">
+                <!-- Slika Tomislavgrada -->
             </div>
-        </section>
-    </div>
+        </div>
+        
+        <!-- Druga sekcija - slika lijevo, tekst desno -->
+        <div class="about-content reverse">
+            <div class="about-image nova-slika">
+                <!-- Slika polja -->
+            </div>	
+            <div class="about-text">
+                <p>Ratovi, progoni, osmansko osvajanje tek je dio mračne strane duvanjske prošlosti. S druge pak strane, svijetla točka uvijek je bilo zajedništvo i hrabrost u otporu u vremenima kada se trebalo boriti za očuvanje identiteta, zbog čega je u duvanjsko kulturno pamćenje duboko utkana legenda o kraljevskoj strani duvanjske povijesti. Na Duvanjskome je polju, prema legendi, 925. g. okrunjen prvi hrvatski kralj Tomislav, stoga ne treba dugo tražiti porijeklo današnjega imena Općine.</p> 
+                <p>U jugozapadnome dijelu Bosne i Hercegovine, u točci koja se nalazi na jednakoj zračnoj udaljenosti od Mostara u Hercegovini i Splita u Dalmaciji, Tomislavgrad kao mjesto u kojemu su se presijecale različite kulture čuva bogatu kulturno-povijesnu baštinu i prirodu zavidne ljepote. Ostavština iz različitih povijesnih razdoblja, od prije milijuna godina do današnjih dana, pojačavat će vašu znatiželju, oduševiti vas i iznenaditi – čuli ste za afričkoga i azijskoga slona, ali jeste li za „duvanjskoga"?</p>
+            </div>
+        </div>
+        
+        <!-- Treća sekcija - tekst lijevo, slika desno -->
+        <div class="about-content">
+            <div class="about-text">
+                <p>Davna i nedavna povijest, slavni podvizi, narodni junaci i mitološka bića utkani su u planinske masive i zaravni, a čuvajući svijest o njima, Duvnjaci danas grade svoju osobnost i nude svakome posjetitelju najbolje od nje. Bilo da žele istražiti prirodne znamenitosti bilo da odluče upoznati se s povijesnom ostavštinom kraja, duvanjsko gostoprimstvo učinit će da se svaki gost duvanjskome kraju poželi iznova vraćati.</p>
+                <p>Zajedništvo se posebno iskazuje za gozbenim stolom – uz jelo ispod sača i čašu vina iz vinograda na 900 mnv, ugodne razgovore i tisućljetnu prirodnu i kulturnu baštinu, uspomene će se u duvanjskome kraju stvarati same od sebe. U okružju bez stresa, napetosti i nepotrebnih zvukova, uz zelenilo, svjež zrak, planinske staze, prekrasne gradine i vidikovce koji pričaju povijesne priče i uz različite kulturno-zabavne manifestacije, imat ćete sve što je potrebno za odmoriti, ali i napuniti srce i tijelo.</p>
+            </div>
+            <div class="about-image">
+                <!-- Slika Tomislavgrada -->
+            </div>
+        </div>
+        
+        <!-- Četvrta sekcija - slika lijevo, tekst desno -->
+        <div class="about-content reverse">
+            <div class="about-image nova-slika">
+                <!-- Slika polja -->
+            </div>	
+            <div class="about-text">
+                <p>Mirno, ali ponosno i dostojanstveno, na Duvanjskome polju stoji Tomislavgrad pozivajući vas da zavirite u njegovo kraljevsko srce i sa sobom ponesete uspomene iz prirode okrunjene poviješću. Dobrodošli!</p>
+            </div>
+        </div>
+    </section>
+</div>
 
     <!-- HIGHLIGHTS PAGE -->
     <div class="page-section" id="highlights-page">
@@ -3179,6 +3224,7 @@
     </script>
 </body>
 </html>
+
 
 
 
