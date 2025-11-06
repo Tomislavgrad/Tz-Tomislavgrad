@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turistička zajednica Općine Tomislavgrad</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -1885,27 +1886,37 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h3>Pošaljite poruku</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Ime i prezime</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email adresa</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Predmet</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Poruka</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">Pošalji poruku</button>
-                    </form>
-                </div>
+    				<h3>Pošaljite poruku</h3>
+    				<form id="contact-form">
+        				<input type="hidden" name="to_name" value="Turistička Zajednica">
+        
+        				<div class="form-group">
+            				<label for="from_name">Ime i prezime</label>
+            				<input type="text" id="from_name" name="from_name" class="form-control" required>
+        				</div>
+        				<div class="form-group">
+            				<label for="email">Email adresa</label>
+            				<input type="email" id="email" name="email" class="form-control" required>
+        				</div>
+        				<div class="form-group">
+            				<label for="subject">Predmet</label>
+            				<input type="text" id="subject" name="subject" class="form-control" required>
+        				</div>
+        				<div class="form-group">
+            				<label for="message">Poruka</label>
+            				<textarea id="message" name="message" class="form-control" required></textarea>
+        				</div>
+        				<button type="submit" class="btn" style="width: 100%;" id="submit-btn">Pošalji poruku</button>
+    				</form>
+    
+    				<!-- DODAJ OVE PORUKE ISPOD FORME -->
+    				<div id="success-message" style="display: none; color: green; margin-top: 15px; padding: 10px; background: #d4ffd4; border-radius: 5px;">
+        				✅ Poruka je uspješno poslana! Odgovorit ćemo Vam u najkraćem mogućem roku.
+    				</div>
+    				<div id="error-message" style="display: none; color: red; margin-top: 15px; padding: 10px; background: #ffd4d4; border-radius: 5px;">
+        				❌ Došlo je do greške. Pokušajte ponovno ili kontaktirajte nas direktno na info@tz-tomislavgrad.ba
+    				</div>
+				</div>
             </div>
             
             <div class="map-container">
@@ -3882,8 +3893,48 @@
             });
         });
     </script>
+    <!-- OSTALI TVOJI SCRIPT TAGOVI -->
+    
+    <!-- EMAILJS SCRIPT - OVO STAVI NA KRAJ PRIJE </body> -->
+    <script>
+        // Initialize EmailJS
+        emailjs.init("X9qWlPOzo1GFGqpUU");
+        
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Prikaži loading stanje
+            submitBtn.textContent = 'Šaljem poruku...';
+            submitBtn.disabled = true;
+            
+            // Sakrij prethodne poruke
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('error-message').style.display = 'none';
+            
+            // Pošalji email
+            emailjs.sendForm('service_3sbti4m', 'template_g9iwdsp', this)
+                .then(function(response) {
+                    console.log('Email uspješno poslan!', response.status, response.text);
+                    document.getElementById('success-message').style.display = 'block';
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    console.error('EmailJS error:', error);
+                    document.getElementById('error-message').style.display = 'block';
+                })
+                .finally(function() {
+                    // Vrati dugme u normalno stanje
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
 </body>
 </html>
+
 
 
 
